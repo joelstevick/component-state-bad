@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
       this.lastName = lastName;
     });
 
-    // using this approach is hard to reason about
+    //  using this approach is hard to reason about
     this.formatLabel();
   }
 
