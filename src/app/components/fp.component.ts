@@ -25,9 +25,9 @@ export class FpComponent implements OnInit {
       firstName: this.dataService.getFirstName(),
       lastName: this.dataService.getLastName(),
     }).subscribe(({ firstName, lastName }) => {
-      this.label = `Mr. ${(firstName as string).toLowerCase()} ${(
-        lastName as string
-      ).toUpperCase()}`;
+      this.label = `Mr. 
+      ${(firstName as string).toLowerCase()} 
+      ${(lastName as string).toUpperCase()}`;
     });
   }
 }
