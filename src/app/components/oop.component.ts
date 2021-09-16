@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -14,7 +14,7 @@ import { DataService } from '../data.service';
     `,
   ],
 })
-export class OopComponent {
+export class OopComponent implements OnInit {
   label: string;
   firstName: string;
   lastName: string;
