@@ -25,9 +25,19 @@ export class AppComponent implements OnInit {
     });
 
     //  using this approach is hard to reason about
+    this.formatFirstName();
+
+    this.formatLastName();
+
     this.formatLabel();
   }
 
+  formatFirstName() {
+    this.firstName = this.firstName.toLowerCase();
+  }
+  formatLastName() {
+    this.lastName = this.lastName.toUpperCase();
+  }
   formatLabel() {
     this.label = `Mr. ${this.firstName} ${this.lastName}`;
   }
@@ -38,7 +48,7 @@ export class AppComponent implements OnInit {
       firstName: this.dataService.getFirstName(),
       lastName: this.dataService.getLastName()
     }).subscribe(({ firstName, lastName }) => {
-      this.label = `${lastName}, ${firstName}`;
+      this.label = `Mr. ${this.firstName.toLowerCase()} ${this.lastName.toUpperCase()}`;
     });
   }
 }
